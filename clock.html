@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+   
+
+    <title>time & data</title>
+    <script>
+        let a;
+        let date;
+        let time;
+        let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        setInterval(() => {
+            a = new Date(); 
+            date = a.toLocaleDateString(undefined, options);
+            time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+            document.getElementById('time').innerHTML = time + "<br>on " + date;
+        }, 1000);
+        
+        
+    </script>
+    <style>
+        body {
+        background-image: url("bb.jpg");
+        background-color: #cccccc;
+        position:right center;
+}
+        .jumbotron{
+            background-color: rgb(43, 104, 129);
+            width:500px;
+            background-position: right center;
+            
+            position: center;
+           
+        }
+        .container{
+            position: relative;
+             top: 80px;
+            left: 500px;
+  
+  
+  
+}
+       
+            
+        }
+    </style>
+</head>
+
+<body>
+    
+<div class="container ">
+        <div class="jumbotron">
+            <h1 class="display-4">Current time Is: <span id="time"></span></h1>
+           
+            <hr class="my-4">
+           
+            <p><i><h2>India tme,date and day :---<br><p > project created By Tushar Kanti Patra</p>
+           </h2>
+                
+            </i></p>
+        </div>
+    </div>
+
+   
+</body>
+
+</html>
